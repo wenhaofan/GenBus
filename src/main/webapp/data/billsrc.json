@@ -1,0 +1,13 @@
+{
+	"state":"ok",
+	"data":[
+		{"text":"微信小程序","value":1},
+		{"text":"微信公众号","value":2},
+		{"text":"PC商城","value":3},
+		{"text":"安卓APP","value":4},
+		{"text":"苹果APP","value":5},
+		{"text":"天猫店铺","value":6},
+		{"text":"其它渠道","value":7}
+		]
+	
+}

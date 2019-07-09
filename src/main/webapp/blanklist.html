@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>列表空白管理模板</title>
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/jbolt.css" rel="stylesheet" />
+	</head>
+
+	<body class="j_page_body needScroll">
+		<div class="j_page">
+			<div class="container-fluid p-0">
+				<!-- 核心内容区域_start -->
+				<div id="toolbar" class="card">
+					<div class="card-header">
+						<div class="row">
+							<span class="j_card_title">订单管理</span>
+							<div class="col j_autowrap">
+								<form class="form-inline" role="form" action="list.html" method="get">
+									<div class="form-group mr-2">
+										<input placeholder="关键词查询" value="" name="keywords" autocomplete="off" class="form-control" type="text" />
+									</div>
+									<div class="form-group mr-2">
+										<select class="form-control selectpicker" data-autoload data-url="data/booleanselect.json" data-text="=是否启用=" data-value="" data-select="" name="enable"></select>
+									</div>
+									
+									<div class="input-group mr-2">
+										<input type="text" autocomplete="off"  id="startTime" data-rule="required;date;" data-msg="格式:yyyy-mm-dd" placeholder="开始日期" class="form-control form-date" name="startDate" />
+										<div class="input-group-append border-0">
+											<span class="input-group-text" >至</span>
+										</div>
+										<input type="text" autocomplete="off"  id="endTime" data-rule="required;date;" data-msg="格式:yyyy-mm-dd" placeholder="结束日期" class="form-control form-date border-left-0" name="endDate" />
+									</div>
+									
+									<div class="form-group mr-2">
+										<select class="form-control selectpicker" 
+											data-autoload data-url="data/billstate.json" 
+											data-text="=订单状态=" 
+											data-value="" 
+											data-select="" 
+											name="enable"></select>
+									</div>
+									
+									<div class="form-group mr-2">
+										<select class="form-control selectpicker" data-autoload data-url="data/billsrc.json" data-text="=订单来源=" data-value="" data-select="" name="enable"></select>
+									</div>
+
+									<button class="btn btn-primary btn-md"><i class="fa fa-search"></i>查询</button>
+								</form>
+							</div>
+							<div class="text-right" style="width:100px;">
+								<a class="btn btn-primary mr-2" 
+									data-dialogbtn 
+									href="dialogform.html" 
+									data-scroll="yes" 
+									data-fs="false" 
+									data-area="900,80%" 
+									data-title="新增用户">
+									<i class="fa fa-plus"></i>新增</a>
+							</div>
+						</div>
+					</div>
+					<div class="card-body">
+						<table class="table table-hover table-bordered text-center align-middle j_table">
+							<thead><th>编号</th><th>订单号</th><th>会员信息</th><th>下单时间</th><th>付款时间</th><th>订单状态</th><th>来源</th><th class="j_table_optcol_normal">操作</th></thead>
+							<tbody>
+								<tr >
+									<td class="j_table_index">1</td>
+									<td><strong >D2019031512340034</strong></td>
+									<td class="j_table_180" >
+										<a class="j_table_user" href="userinfo.html">
+										<img data-tips data-content="姓名：小木<br>性别：男<br>年龄：30岁" class="rounded-circle float-left" src="https://www.jfinal.com/upload/avatar/0/1.jpg"/>
+										<h3>齐天大圣</h3>
+										<span class="j_user_level">VIP-1</span>
+										</a>
+									</td>
+									<td class="j_table_time">2019-03-15 11:09:58</td>
+									<td class="j_table_time">2019-03-15 11:10:01</td>
+									<td class="j_table_state"><span class="badge badge-success">已完成</span></td>
+									<td class="j_table_120"><span class="badge badge-primary">微信小程序</span></td>
+									<td>
+										<a tooltip data-title="编辑"  class="j_table_edit" href="dialogform.html" data-area="900,80%" data-scroll="yes"><i class="fa fa-edit text-primary"></i></a>
+										<a tooltip data-title="删除" class="j_table_del" data-handler="removeTr" href="data/ajaxopt.json"><i class="fa fa-trash text-danger"></i></a>
+									</td>
+								</tr>
+								
+								
+							</tbody>
+						</table>
+						
+						<!-- 分页-->
+						<div class="j_pagination">
+						<nav class="pull-right" aria-label="...">
+						  <ul class="pagination">
+						    <li class="page-item disabled">
+						      <span class="page-link">上一页</span>
+						    </li>
+						    <li class="page-item"><a class="page-link" href="#">1</a></li>
+						    <li class="page-item active" aria-current="page">
+						      <span class="page-link">
+						        2
+						        <span class="sr-only">(current)</span>
+						      </span>
+						    </li>
+						    <li class="page-item"><a class="page-link" href="#">3</a></li>
+						    <li class="page-item"><a class="page-link" href="#">4</a></li>
+						    <li class="page-item"><a class="page-link" href="#">5</a></li>
+						    <li class="page-item"><a class="page-link" href="#">6</a></li>
+						    <li class="page-item"><a class="page-link" href="#">7</a></li>
+						    <li class="page-item">
+						      <a class="page-link" href="#">下一页</a>
+						    </li>
+						  </ul>
+						</nav>
+						</div>
+					</div>
+				</div>
+				<!-- 核心内容区域_end -->
+			</div>
+		</div>
+		
+		<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+		<script src="assets/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+		<script src="assets/plugins/bootstrap-select/js/bootstrap-select.min.js" type="text/javascript"></script>
+		<script src="assets/plugins/layer/layer.js" type="text/javascript"></script>
+		<script src="assets/plugins/laydate/laydate.js" type="text/javascript"></script>
+		<script src="assets/js/jbolt.js" type="text/javascript"></script>
+		<script src="assets/js/jbolt_innerpage.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function submitThisForm() {
+				$("#form").submit();
+			}
+			$(function() {
+				//下来自动搜索补全
+
+			});
+		</script>
+	</body>
+
+</html>

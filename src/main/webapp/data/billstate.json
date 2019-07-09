@@ -1,0 +1,11 @@
+{
+	"state":"ok",
+	"data":[
+		{"text":"待付款","value":1},
+		{"text":"已付款","value":2},
+		{"text":"已发货","value":3},
+		{"text":"订单完成","value":4},
+		{"text":"订单关闭","value":5}
+		]
+	
+}

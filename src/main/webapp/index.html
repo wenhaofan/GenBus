@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>JBolt后端管理框架UI</title>
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+		<link href="assets/css/jbolt.css" rel="stylesheet" />
+		<style>
+			html,body{
+				height: 100%;
+				max-height: 100%;
+				overflow-y: hidden;
+				min-width: 1360px;
+				overflow-x: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="j_header">
+			<div class="j_logobox j_animated">
+				<div class="j_logo j_animated"></div>				
+			</div>
+			<div class="j_toggle_slider_menu" onclick="toggleSliderMenu()"><span class="fa fa-bars"></span></div>
+			<ul class="j_moudles">
+				<li class="active" data-moudlekey="demo">
+					<i class="fa fa-list"></i>
+					<p>demo</p>
+				</li>
+				<li data-moudlekey="m1">
+					<i class="fa fa-cube"></i>
+					<p>商品</p>
+				</li>
+				<li  data-moudlekey="m2">
+					<i class="fa fa-file-text-o"></i>
+					<p>订单</p>
+				</li>
+				<li   data-moudlekey="m3">
+					<i class="fa fa-address-card-o"></i>
+					<p>客户</p>
+				</li>
+				<li   data-moudlekey="m4">
+					<i class="fa fa-rmb"></i>
+					<p>财务</p>
+				</li>
+				<li   data-moudlekey="m5">
+					<i class="fa fa-bar-chart"></i>
+					<p>统计</p>
+				</li>
+				<li   data-moudlekey="m4">
+					<i class="fa fa-cart-arrow-down"></i>
+					<p>采购</p>
+				</li>
+				<li   data-moudlekey="m4">
+					<i class="fa fa-cubes"></i>
+					<p>仓储</p>
+				</li>
+				<li data-moudlekey="m4">
+					<i class="fa fa-bicycle"></i>
+					<p>物流</p>
+				</li>
+				<li   data-moudlekey="m6">
+					<i class="fa fa-cogs"></i>
+					<p>系统</p>
+				</li>
+			</ul>
+			<div class="j_user_logout" ><span class="fa fa-sign-out"></span></div>
+			
+			<div class="j_header_user">
+				<div class="j_user_name"><span>山东小木</span><i class="fa fa-sort-desc p-1 ml-1"></i></div>
+				<div class="j_header_Layer">
+					<div class="list-group list-group-flush">
+						<a data-tabtrigger href="tabform.html" class="list-group-item" ><i class="fa fa-user font14"></i><span class="ml-2">个人资料</span></a>
+						<a data-tabtrigger href="tabform.html" class="list-group-item"><i class="fa fa-cog font14"></i><span class="ml-2">密码重置</span></a>
+					</div>
+				</div>
+				</div>
+			
+						
+		
+			
+			
+		</div>
+		<div class="j_slider_menu j_animated">
+			<div class="j_slider_menus">
+			<dl data-moudlekey="demo">
+			<dt><i class="fa fa-cogs"></i>框架DEMO<i class="fa fa-angle-right pull-right"></i></dt>
+				<dd data-id="home" data-url="home.html">首页风格</dd>
+				<dd data-id="list" data-url="list.html">列表综合管理-普通</dd>
+				<dd data-id="tabform" data-url="tabform.html">表单-样式1-tab</dd>
+				<dd data-id="tabform2" data-url="tabform2.html">表单-样式2-tab</dd>
+				<dd data-id="blankform" data-url="blankform.html">空白表单</dd>
+				<dd data-id="blanklist" data-url="blanklist.html">空白列表</dd>
+			</dl>
+			<dl data-moudlekey="m1">
+			<dt><i class="fa fa-cogs"></i>权限管理<i class="fa fa-angle-right pull-right"></i></dt>
+				<dd data-id="fun1" data-url="home.html">用户管理</dd>
+				<dd data-id="fun2" data-url="home.html">角色管理</dd>
+				<dd data-id="fun3" data-url="home.html">权限定义</dd>
+			</dl>
+			<dl data-moudlekey="m2">
+			<dt><i class="fa fa-cogs"></i>模块moudle2菜单1<i class="fa fa-angle-right pull-right"></i></dt>
+				<dd data-id="fun4" data-url="home.html">用户管理</dd>
+				<dd data-id="fun5" data-url="home.html">角色管理</dd>
+				<dd data-id="fun6" data-url="home.html">权限定义</dd>
+			</dl>
+			<dl data-moudlekey="m2">
+			<dt><i class="fa fa-cogs"></i>模块moudle2菜单2<i class="fa fa-angle-right pull-right"></i></dt>
+				<dd data-id="fun7" data-url="home.html">用户管理</dd>
+				<dd data-id="fun8" data-url="home.html">角色管理</dd>
+				<dd data-id="fun9" data-url="home.html">权限定义</dd>
+			</dl>
+			<dl data-moudlekey="m3">
+			<dt><i class="fa fa-cogs"></i>模块moudle3菜单<i class="fa fa-angle-right pull-right"></i></dt>
+				<dd data-id="fun10" data-url="home.html">用户管理</dd>
+				<dd data-id="fun11" data-url="home.html">角色管理</dd>
+				<dd data-id="fun12" data-url="home.html">权限定义</dd>
+			</dl>
+			<dl data-moudlekey="m4">
+			<dt><i class="fa fa-cogs"></i>模块moudle4菜单<i class="fa fa-angle-right pull-right"></i></dt>
+				<dd data-id="fun13" data-url="home.html">用户管理</dd>
+				<dd data-id="fun14" data-url="home.html">角色管理</dd>
+				<dd data-id="fun15" data-url="home.html">权限定义</dd>
+			</dl>
+			<dl data-moudlekey="m5">
+			<dt><i class="fa fa-cogs"></i>模块moudle5菜单<i class="fa fa-angle-right pull-right"></i></dt>
+				<dd data-id="fun16" data-url="home.html">用户管理</dd>
+				<dd data-id="fun17" data-url="home.html">角色管理</dd>
+				<dd data-id="fun18" data-url="home.html">权限定义</dd>
+			</dl>
+			<dl data-moudlekey="m6">
+			<dt><i class="fa fa-cogs"></i>模块moudle6菜单<i class="fa fa-angle-right pull-right"></i></dt>
+				<dd data-id="fun22" data-url="home.html">用户管理</dd>
+				<dd data-id="fun23" data-url="home.html">角色管理</dd>
+				<dd data-id="fun24" data-url="home.html">权限定义</dd>
+			</dl>
+			
+			
+			</div>
+		</div>
+		<div class="j_main_contianer j_animated">
+			<div class="j_tab_container" id="jtabs"></div>
+		</div>
+		<div class="j_footer">
+			
+		</div>
+		<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+		<script src="assets/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+		<script src="assets/js/juicer-min.js" type="text/javascript"></script>
+		<script src="assets/js/jquery.contextify.min.js" type="text/javascript"></script>
+		<script src="assets/js/jbolt.js" type="text/javascript"></script>
+		<script src="assets/js/jbolt_admin.js" type="text/javascript" charset="utf-8"></script>
+		<script type="application/javascript">
+			$(function(){
+				JBoltTab=$("#jtabs").jboltTab({tabs:[{noClose:true,active:true,title:"Dashboard",url:"home.html"}]});
+			})
+		</script>
+	</body>
+</html>
